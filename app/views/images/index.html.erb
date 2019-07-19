@@ -1,0 +1,35 @@
+<style>
+    table, tr, th, td{
+        width: 50%;
+        border: solid 1px;
+    }
+    th, td{
+        width: 20%;
+        text-align: center;
+        
+    }
+    td img{
+        width: 100%;
+    }
+</style>
+<h1>画像一覧</h1>
+<ul>
+<table>
+    <tr>
+        <th>画像</th>
+        <th>画像ファイル名</th>
+        <th>メモ</th>
+    </tr>
+    <% @images.each do |image| %>
+    <tr>
+        <td><%= image_tag show_image_image_path(image) %></td>
+        <td><%= image.filename %></td>
+        <td><%= image.memo %></td>
+    </tr>
+    <% end %>
+</table>    
+
+</ul>
+<p>
+    <%= link_to '新規登録', new_image_path %>
+</p>

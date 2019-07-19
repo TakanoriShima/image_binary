@@ -1,0 +1,16 @@
+<h1>新規登録</h1>
+<%= form_for @image do |f| %>
+  <div>
+    メモ：　<%= f.text_field :memo %>
+  </div>
+  <div>
+    画像：　<%= f.file_field :photo %>
+  </div>
+  <div>
+    <%= f.submit "新規登録" %>
+  </div>
+<% end %>
+<p>
+    <%= link_to '画像一覧へ', root_path %>
+</p>
+
